@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="given_name_value,family_name_value"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/personal_info_ar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/personal_info_arabic"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/label_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/personal_info_en"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/personal_info_english"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/label_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toStartOf="@+id/personal_info_ar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/personal_info_ar"/>
+
+    <View
+        android:id="@+id/about_us_separator"
+        android:layout_width="20dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/red"
+        app:layout_constraintEnd_toEndOf="@+id/personal_info_ar"
+        app:layout_constraintTop_toBottomOf="@+id/personal_info_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/given_name_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/given_name_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/about_us_separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/about_us_separator" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/given_name_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/given_name_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/about_us_separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/given_name_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/given_name_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/about_us_separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/given_name_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/date_of_birth_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/date_of_birth_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/about_us_separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/barrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/date_of_birth_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/date_of_birth_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/about_us_separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/date_of_birth_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/date_of_birth_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/about_us_separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/date_of_birth_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/family_name_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/family_name_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_us_separator" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/family_name_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/family_name_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/family_name_ar"
+        app:layout_constraintStart_toStartOf="@+id/family_name_ar"
+        app:layout_constraintTop_toBottomOf="@+id/family_name_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/family_name_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/family_name_ar"
+        app:layout_constraintStart_toStartOf="@+id/family_name_ar"
+        app:layout_constraintTop_toBottomOf="@id/family_name_en"
+        tools:text="Name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

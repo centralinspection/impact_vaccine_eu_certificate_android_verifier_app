@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <include android:id="@+id/header_layout"
+        layout="@layout/layout_background_header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/header_height"
+        android:background="@drawable/rounded_top_corner_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/back_home_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_label_ar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/action_privacy_arabic"
+                    android:textColor="@color/green_1"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/pp_arabic_separator"
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/pp_label_ar"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_label_ar"
+                    android:background="@color/red"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_1_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_arabic_separator" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_2_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_2"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_1_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_3_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_3"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_2_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_4_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_4"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_3_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_5_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_5"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_4_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_6_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_6"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_5_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_7_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_7"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_6_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_8_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_8"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_7_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_9_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_9"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_8_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_10_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_10"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_9_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_11_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_11"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_10_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_12_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_12"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_11_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_13_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_13"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_12_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_14_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_14"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_13_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_15_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_15"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_14_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_16_ar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_arabic_16"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_15_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_contact_email_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/contact_email"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:gravity="end"
+                    app:layout_constraintEnd_toStartOf="@+id/pp_value_16_ar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/pp_value_16_ar"
+                    app:layout_constraintBottom_toBottomOf="@+id/pp_value_16_ar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_label_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/action_privacy_english"
+                    android:textColor="@color/green_1"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_16_ar"/>
+
+                <View
+                    android:id="@+id/pp_english_separator"
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="@+id/pp_label_en"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_label_en"
+                    android:background="@color/red"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_1_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_english_separator" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_2_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_1_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_3_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_2_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_4_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_4"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_3_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_5_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_4_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_6_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_6"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_5_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_7_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_7"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_6_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_8_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_8"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_7_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_9_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_9"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_8_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_10_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_9_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_11_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_11"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_10_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_12_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_12"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_11_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_13_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_13"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_12_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_14_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_14"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_13_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_15_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_14_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_value_16_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/privacy_policy_english_16"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pp_value_15_en" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pp_contact_email_en"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="3dp"
+                    android:text="@string/contact_email"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/label_text_size"
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintStart_toEndOf="@+id/pp_value_16_en"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/pp_value_16_en"
+                    app:layout_constraintBottom_toBottomOf="@+id/pp_value_16_en"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back_home_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/green_border_background"
+            android:text="@string/back_home"
+            android:textColor="@color/green_1"
+            android:textAllCaps="false"
+            android:fontFamily="@font/open_sans_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

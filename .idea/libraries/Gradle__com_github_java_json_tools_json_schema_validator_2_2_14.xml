@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.java-json-tools:json-schema-validator:2.2.14">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.github.java-json-tools/json-schema-validator/2.2.14/10c42918adc1fd4454e83bb21365f30df497a076/json-schema-validator-2.2.14.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.java-json-tools/json-schema-validator/2.2.14/10c42918adc1fd4454e83bb21365f30df497a076/json-schema-validator-2.2.14.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.github.java-json-tools/json-schema-validator/2.2.14/e1de4da33fc052fa697de67a442085410df5cd52/json-schema-validator-2.2.14-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.java-json-tools/json-schema-validator/2.2.14/e1de4da33fc052fa697de67a442085410df5cd52/json-schema-validator-2.2.14-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.github.java-json-tools/json-schema-validator/2.2.14/6d85613975d15d37f8c23a11d82803548733a794/json-schema-validator-2.2.14-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.java-json-tools/json-schema-validator/2.2.14/6d85613975d15d37f8c23a11d82803548733a794/json-schema-validator-2.2.14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

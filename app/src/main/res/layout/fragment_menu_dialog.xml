@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-12dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="@dimen/rounded_corner_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_background"
+            android:paddingBottom="40dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_ar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/droid_kufi_regular"
+                android:gravity="end"
+                android:text="@string/menu_title_arabic"
+                android:textColor="@color/green_1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/title_en"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_en"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:gravity="end"
+                android:text="@string/menu_title_english"
+                android:textColor="@color/green_1"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_ar"
+                app:layout_constraintEnd_toStartOf="@+id/title_ar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="28dp"
+                android:background="@color/grey_separator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_ar" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/about_us_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/separator">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/about_us_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:gravity="end"
+                    android:text="@string/action_about_us_english"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/about_us_ar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    android:gravity="end"
+                    android:text="@string/action_about_us_arabic"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/terms_conditions_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/about_us_row">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/terms_conditions_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:gravity="end"
+                    android:text="@string/action_terms_english"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/terms_conditions_ar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    android:gravity="end"
+                    android:text="@string/action_terms_arabic"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/privacy_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/terms_conditions_row">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/privacy_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:gravity="end"
+                    android:text="@string/action_privacy_english"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/privacy_ar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    android:gravity="end"
+                    android:text="@string/action_privacy_arabic"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/verifier_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/privacy_row">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/verifier_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:gravity="end"
+                    android:text="@string/action_certificates_english"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/verifier_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/droid_kufi_regular"
+                    android:gravity="end"
+                    android:text="@string/action_certificates_arabic"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,166 @@
+<resources>
+    <string name="menu_title_english">Menu</string>
+    <string name="menu_title_arabic">قائمة</string>
+    <string name="action_about_us_english">About us</string>
+    <string name="action_about_us_arabic">من نحن</string>
+    <string name="action_terms_english">Terms of use</string>
+    <string name="action_terms_arabic">شروط الاستخدام</string>
+    <string name="action_privacy_english">Privacy policy</string>
+    <string name="action_privacy_arabic">سياسة الخصوصية</string>
+    <string name="action_certificates_english">Verifier</string>
+    <string name="action_certificates_arabic">المدقق</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="scan_qr_code">Scan the QR code</string>
+    <string name="scan_button">Scan again</string>
+    <string name="back">Back</string>
+    <string name="back_home">Back to homepage</string>
+    <string name="by">BY</string>
+    <string name="contact_email"><u>contact@domain</u></string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <string name="latest_sync_date_english">Certificates last updated on:</string>
+    <string name="latest_sync_date_arabic">آخر تحديث للشهادات:</string>
+    <string name="no_sync_date">No certificates available.</string>
+    <string name="please_reconnect_subtitle">The App needs to reconnect to the server,\n<u>click here to update</u></string>
+    <string name="synchronize">Synchronize</string>
+    <string name="home_scan_code">Click to Scan</string>
+
+    <string name="label_vaccines_arabic">اللقاح</string>
+    <string name="label_vaccines_english">Vaccine</string>
+    <string name="certificate_issuer_arabic">مصدر الشهادة</string>
+    <string name="certificate_issuer_english">Certificate Issuer</string>
+    <string name="certificate_identifier_arabic">معرف الشهادة</string>
+    <string name="certificate_identifier_english">Certificate Identifier</string>
+    <string name="marketing_authorization_arabic">ترخيص التسويق</string>
+    <string name="marketing_authorization_english">Marketing Authorization</string>
+    <string name="vaccine_name_arabic">لقاح أو وقاية</string>
+    <string name="vaccine_name_english">Vaccine or prophylaxis</string>
+    <string name="medical_product_arabic">منتج طبي</string>
+    <string name="medical_product_english">Medical Product</string>
+    <string name="date_of_vaccination_arabic">تاريخ التطعيم</string>
+    <string name="date_of_vaccination_english">Date of Vaccination</string>
+    <string name="dose_number_arabic">عدد الجرعات من إجمالي\nسلسلة جرعات</string>
+    <string name="dose_number_english">Dose number out of\ntotal series of doses</string>
+    <string name="disease_label_arabic">المرض المستهدف</string>
+    <string name="disease_label_english">Disease or\nTargeted Agent</string>
+
+    <string name="pcr">PCR</string>
+    <string name="testing_center_arabic">مركز إجراء الفحوصات</string>
+    <string name="testing_center_english">Testing center</string>
+    <string name="test_name_arabic">إسم الفحص</string>
+    <string name="test_name_english">Test name</string>
+    <string name="test_type_arabic">نوع الإختبار السريع</string>
+    <string name="test_type_english">Test type rapid</string>
+    <string name="detected_arabic">تم العثور</string>
+    <string name="detected_english">Detected</string>
+    <string name="collection_time_arabic">وقت جمع العينة</string>
+    <string name="collection_time_english">Sample collection time</string>
+    <string name="test_identifier_arabic">معرف الإختبار</string>
+    <string name="test_identifier_english">Test identifier</string>
+
+    <string name="recovery_arabic">إستعادة</string>
+    <string name="recovery_english">Recovery</string>
+    <string name="valid_from_arabic">نموذج شهادة صالحة</string>
+    <string name="valid_from_english">Certificate valid from</string>
+    <string name="valid_until_arabic">الشهادة صالحة حتى</string>
+    <string name="valid_until_english">Certificate valid until</string>
+    <string name="first_day_positive_arabic">الإختبار الإيجابي لليوم الأول</string>
+    <string name="first_day_positive_english">First day positive test</string>
+
+    <string name="personal_info_arabic">معلومات شخصية</string>
+    <string name="personal_info_english">Personal Info</string>
+    <string name="given_name_arabic">الإسم المعطى</string>
+    <string name="given_name_english">Given Name</string>
+    <string name="family_name_arabic">إسم العائلة</string>
+    <string name="family_name_english">Family Name</string>
+    <string name="date_of_birth_arabic">تاريخ الولادة</string>
+    <string name="date_of_birth_english">Date of Birth</string>
+    <string name="country_arabic">دولة</string>
+    <string name="country_english">Country</string>
+
+    <string name="about_us_label_english">About us</string>
+    <string name="about_us_label_arabic">معلومات عنا</string>
+    <string name="legal_disclaimer_label_english">Legal disclaimer</string>
+    <string name="legal_disclaimer_label_arabic">إخلاء المسؤولية القانونية</string>
+
+    <string name="statistics_english">Statistics</string>
+    <string name="statistics_arabic">إحصائيات</string>
+    <string name="valid_scans_english">Number of valid certificates</string>
+    <string name="valid_scans_arabic">عدد الشهادات الصالحة</string>
+    <string name="invalid_scans_english">Number of invalid certificates</string>
+    <string name="invalid_scans_arabic">عدد الشهادات الغير صالحة</string>
+
+    <string name="synch_error_arabic">فشل التحديث ، يرجى\nالمحاولة مرة أخرى</string>
+    <string name="synch_error_english">Update failed,\nplease try again</string>
+    <string name="scan_error_arabic">رمز الإستجابة السريعة\nالذي مسحته غير صالح!</string>
+    <string name="scan_error_english">The QR code you\nscanned for is not valid!</string>
+
+
+    <string name="about_us_arabic">
+        ABOUT US ARABIC
+    </string>
+    <string name="about_us_english">
+        ABOUT US ENGLISH
+    </string>
+
+    <string name="privacy_policy_arabic_1">PRIVACY POLICY ARABIC 1</string>
+    <string name="privacy_policy_arabic_2">PRIVACE POLICY ARABIC 2</string>
+    <string name="privacy_policy_arabic_3">PRIVACY POLICY ARABIC 3</string>
+    <string name="privacy_policy_arabic_4">PRIVACY POLICY ARABIC 4</string>
+    <string name="privacy_policy_arabic_5">PRIVACY POLICY ARABIC 5</string>
+    <string name="privacy_policy_arabic_6">PRIVACY POLICY ARABIC 6</string>
+    <string name="privacy_policy_arabic_7">PRIVACY POLICY ARABIC 7</string>
+    <string name="privacy_policy_arabic_8">PRIVACY POLICY ARABIC 8</string>
+    <string name="privacy_policy_arabic_9">PRIVACY POLICY ARABIC 9</string>
+    <string name="privacy_policy_arabic_10">PRIVACY POLICY ARABIC 10</string>
+    <string name="privacy_policy_arabic_11">PRIVACY POLICY ARABIC 11</string>
+    <string name="privacy_policy_arabic_12">PRIVACY POLICY ARABIC 12</string>
+    <string name="privacy_policy_arabic_13">PRIVACY POLICY ARABIC 13</string>
+    <string name="privacy_policy_arabic_14">PRIVACY POLICY ARABIC 14</string>
+    <string name="privacy_policy_arabic_15">PRIVACY POLICY ARABIC 15</string>
+    <string name="privacy_policy_arabic_16">PRIVACY POLICY ARABIC 16</string>
+    <string name="privacy_policy_english_1">PRIVACY POLICY ENGLISH 1</string>
+    <string name="privacy_policy_english_2">PRIVACY POLICY ENGLISH 2</string>
+    <string name="privacy_policy_english_3">PRIVACY POLICY ENGLISH 3</string>
+    <string name="privacy_policy_english_4">PRIVACY POLICY ENGLISH 4</string>
+    <string name="privacy_policy_english_5">PRIVACY POLICY ENGLISH 5</string>
+    <string name="privacy_policy_english_6">PRIVACY POLICY ENGLISH 6</string>
+    <string name="privacy_policy_english_7">PRIVACY POLICY ENGLISH 7</string>
+    <string name="privacy_policy_english_8">PRIVACY POLICY ENGLISH 8</string>
+    <string name="privacy_policy_english_9">PRIVACY POLICY ENGLISH 9</string>
+    <string name="privacy_policy_english_10">PRIVACY POLICY ENGLISH 10</string>
+    <string name="privacy_policy_english_11">PRIVACY POLICY ENGLISH 11</string>
+    <string name="privacy_policy_english_12">PRIVACY POLICY ENGLISH 12</string>
+    <string name="privacy_policy_english_13">PRIVACY POLICY ENGLISH 13</string>
+    <string name="privacy_policy_english_14">PRIVACY POLICY ENGLISH 14</string>
+    <string name="privacy_policy_english_15">PRIVACY POLICY ENGLISH 15</string>
+    <string name="privacy_policy_english_16">PRIVACY POLICY ENGLISH 15</string>
+
+    <string name="terms_conditions_arabic_1">TERMS AND CONDITIONS ARABIC 1</string>
+    <string name="terms_conditions_arabic_2">TERMS AND CONDITIONS ARABIC 2</string>
+    <string name="terms_conditions_arabic_3">TERMS AND CONDITIONS ARABIC 3</string>
+    <string name="terms_conditions_arabic_4">TERMS AND CONDITIONS ARABIC 4</string>
+    <string name="terms_conditions_arabic_5">TERMS AND CONDITIONS ARABIC 5</string>
+    <string name="terms_conditions_arabic_6">TERMS AND CONDITIONS ARABIC 6</string>
+    <string name="terms_conditions_arabic_7">TERMS AND CONDITIONS ARABIC 7</string>
+    <string name="terms_conditions_arabic_8">TERMS AND CONDITIONS ARABIC 8</string>
+    <string name="terms_conditions_arabic_9">TERMS AND CONDITIONS ARABIC 9</string>
+    <string name="terms_conditions_arabic_10">TERMS AND CONDITIONS ARABIC 10</string>
+    <string name="terms_conditions_arabic_11">TERMS AND CONDITIONS ARABIC 11</string>
+    <string name="terms_conditions_arabic_12">TERMS AND CONDITIONS ARABIC 12</string>
+    <string name="terms_conditions_arabic_13">TERMS AND CONDITIONS ARABIC 13</string>
+    <string name="terms_conditions_english_1">TERMS AND CONDITIONS ENGLISH 1</string>
+    <string name="terms_conditions_english_2">TERMS AND CONDITIONS ENGLISH 2</string>
+    <string name="terms_conditions_english_3">TERMS AND CONDITIONS ENGLISH 3</string>
+    <string name="terms_conditions_english_4">TERMS AND CONDITIONS ENGLISH 4</string>
+    <string name="terms_conditions_english_5">TERMS AND CONDITIONS ENGLISH 5</string>
+    <string name="terms_conditions_english_6">TERMS AND CONDITIONS ENGLISH 6</string>
+    <string name="terms_conditions_english_7">TERMS AND CONDITIONS ENGLISH 7</string>
+    <string name="terms_conditions_english_8">TERMS AND CONDITIONS ENGLISH 8</string>
+    <string name="terms_conditions_english_9">TERMS AND CONDITIONS ENGLISH 9</string>
+    <string name="terms_conditions_english_10">TERMS AND CONDITIONS ENGLISH 10</string>
+    <string name="terms_conditions_english_11">TERMS AND CONDITIONS ENGLISH 11</string>
+    <string name="terms_conditions_english_12">TERMS AND CONDITIONS ENGLISH 12</string>
+    <string name="terms_conditions_english_13">TERMS AND CONDITIONS ENGLISH 13</string>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="@dimen/rounded_corner_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/error_message_ar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="@string/scan_error_arabic"
+                android:textColor="@color/red"
+                android:textSize="18sp"
+                android:fontFamily="@font/droid_kufi_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/error_message_en"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="@string/scan_error_english"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/error_message_ar" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/rescan_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="@string/scan_button"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/green_button_background"
+                android:textAllCaps="false"
+                android:fontFamily="@font/open_sans_bold"
+                app:layout_constraintEnd_toStartOf="@+id/back_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/error_message_en"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="@string/back"
+                android:textColor="@color/green_1"
+                android:textSize="16sp"
+                android:background="@drawable/green_border_background"
+                android:textAllCaps="false"
+                android:fontFamily="@font/open_sans_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rescan_button"
+                app:layout_constraintTop_toBottomOf="@+id/error_message_en"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

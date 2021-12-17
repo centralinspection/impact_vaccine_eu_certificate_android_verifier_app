@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.lifecycle:lifecycle-runtime-ktx:2.2.0@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-3/b31fa3d1080f902f82a37d826e3ef2f2/transformed/jetified-lifecycle-runtime-ktx-2.2.0/res" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-3/baaf51e00b56fc9e06c63fd6f8c570b1/transformed/jetified-lifecycle-runtime-ktx-2.2.0/res" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-3/b31fa3d1080f902f82a37d826e3ef2f2/transformed/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-3/b31fa3d1080f902f82a37d826e3ef2f2/transformed/jetified-lifecycle-runtime-ktx-2.2.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-3/baaf51e00b56fc9e06c63fd6f8c570b1/transformed/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-3/baaf51e00b56fc9e06c63fd6f8c570b1/transformed/jetified-lifecycle-runtime-ktx-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/baaf51e00b56fc9e06c63fd6f8c570b1/transformed/jetified-lifecycle-runtime-ktx-2.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/baaf51e00b56fc9e06c63fd6f8c570b1/transformed/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/baaf51e00b56fc9e06c63fd6f8c570b1/transformed/jetified-lifecycle-runtime-ktx-2.2.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime-ktx/2.2.0/d830dc45563157582e0075c25cd10d6cf8d21755/lifecycle-runtime-ktx-2.2.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime-ktx/2.2.0/d830dc45563157582e0075c25cd10d6cf8d21755/lifecycle-runtime-ktx-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

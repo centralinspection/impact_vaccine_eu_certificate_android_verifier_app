@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/first_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="certificate_identifier_value,certificate_issuer_value"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/second_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="country_value,disease_name_value"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/third_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="test_name_value,testing_center_value"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/fourth_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="test_type_value,detected_value"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pcr_label_en"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/pcr"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/label_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="20dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/red"
+        app:layout_constraintEnd_toEndOf="@+id/pcr_label_en"
+        app:layout_constraintTop_toBottomOf="@+id/pcr_label_en" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/certificate_issuer_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/certificate_issuer_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/certificate_issuer_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/certificate_issuer_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/certificate_issuer_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/certificate_issuer_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/certificate_issuer_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/disease_name_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/disease_label_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/first_barrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/disease_name_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/disease_label_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/disease_name_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/disease_name_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/disease_name_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/testing_center_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/testing_center_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/second_barrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/testing_center_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/testing_center_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/testing_center_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/testing_center_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/testing_center_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/test_type_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/test_type_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/third_barrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/test_type_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/test_type_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/test_type_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/test_type_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:gravity="end"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/test_type_en"
+        tools:text="Name" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/collection_time_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/collection_time_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/fourth_barrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/collection_time_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/collection_time_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/collection_time_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/collection_time_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/collection_time_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/certificate_identifier_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/certificate_identifier_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/certificate_identifier_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/certificate_identifier_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@+id/certificate_identifier_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/certificate_identifier_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@id/certificate_identifier_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/country_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/country_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@+id/first_barrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/country_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/country_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@+id/country_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/country_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@id/country_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/test_name_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/test_name_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@+id/second_barrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/test_name_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/test_name_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@+id/test_name_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/test_name_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@id/test_name_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detected_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/detected_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@+id/third_barrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detected_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/detected_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@+id/detected_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detected_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@id/detected_en"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/test_identifier_ar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/test_identifier_arabic"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/droid_kufi_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@+id/fourth_barrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/test_identifier_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/test_identifier_english"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@+id/test_identifier_ar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/test_identifier_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:textColor="@color/green_1"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/certificate_identifier_ar"
+        app:layout_constraintStart_toStartOf="@+id/certificate_identifier_ar"
+        app:layout_constraintTop_toBottomOf="@id/test_identifier_en"
+        tools:text="Name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

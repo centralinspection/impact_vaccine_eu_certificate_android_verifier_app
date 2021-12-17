@@ -1,0 +1,121 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        sign {
+            // This needs to change to use current signing config on store
+            // Added for now to test Proguard
+            storeFile file("pathToKeyStore/KeyFile.keystore")
+            storePassword "STOREPASSWORD"
+            keyAlias "KEY_NAME_IN_KEYSTORE"
+            keyPassword "KEY_PASSWORD"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.sign
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    packagingOptions {
+        exclude 'META-INF/ASL-2.0.txt'
+        exclude 'META-INF/LGPL-3.0.txt'
+        exclude 'draftv4/schema'
+        exclude 'draftv3/schema'
+    }
+    compileSdkVersion 30
+    flavorDimensions "default"
+    productFlavors {
+        qa {
+            dimension "default"
+            applicationId "com.owner.test.dgcverifier"
+
+            buildConfigField "String", "HOST_ADDRESS", '"https://NATIONAL_BACKEND_HOST/PATH/FOR/QA/"'
+            resValue "string", "app_name", "COVID-PASS - Test"
+        }
+
+        production {
+            dimension "default"
+            applicationId "com.owner.dgcverifier"
+
+            buildConfigField "String", "HOST_ADDRESS", '"https://NATIONAL_BACKEND_HOST/PATH/FOR/PRODUCTION/"'
+            resValue "string", "app_name", "COVID-PASS"
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+
+
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.4.32'
+    implementation 'com.augustcellars.cose:cose-java:1.1.0'
+    implementation("com.github.java-json-tools:json-schema-validator:2.2.14") {
+        exclude group: "org.mozilla", module: "rhino"
+    }
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.12.3'
+    implementation 'org.bouncycastle:bcpkix-jdk15to18:1.68'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.32'
+
+  //  implementation "androidx.work:work-runtime:2.0.0-rc01"
+
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    def lifecycle_version = '2.3.1'
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+    // preference version 1.1.1 is not stable
+    implementation("androidx.preference:preference") {
+        version {
+            strictly("1.1.0")
+        }
+    }
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+}

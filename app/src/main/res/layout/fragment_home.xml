@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <include android:id="@+id/header_layout"
+        layout="@layout/layout_background_header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/header_height"
+        android:background="@drawable/rounded_top_corner_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/scan_button_border"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/scanner_button_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.33" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scan_button_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="@string/home_scan_code"
+            android:textColor="@color/grey_text_2"
+            android:textSize="18sp"
+            android:fontFamily="@font/open_sans_bold"
+            app:layout_constraintEnd_toEndOf="@+id/scan_button_border"
+            app:layout_constraintStart_toStartOf="@+id/scan_button_border"
+            app:layout_constraintTop_toTopOf="@+id/scan_button_border" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_qr_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/scan_button_border"
+            app:layout_constraintEnd_toEndOf="@+id/scan_button_border"
+            app:layout_constraintStart_toStartOf="@+id/scan_button_border"
+            app:layout_constraintTop_toBottomOf="@+id/scan_button_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/certificate_date_label_ar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latest_sync_date_arabic"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size"
+            android:fontFamily="@font/droid_kufi_regular"
+            app:layout_constraintVertical_bias="0.6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/certificate_date_value_ar"
+            app:layout_constraintTop_toBottomOf="@+id/scan_button_border"
+            app:layout_constraintBottom_toTopOf="@+id/certificate_date_label_en"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/certificate_date_value_ar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size"
+            android:textStyle="bold"
+            android:fontFamily="@font/open_sans_bold"
+            app:layout_constraintEnd_toStartOf="@+id/certificate_date_label_ar"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/certificate_date_label_ar"
+            app:layout_constraintBottom_toBottomOf="@+id/certificate_date_label_ar"
+            tools:text="06-10-2021" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/certificate_date_label_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latest_sync_date_english"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size"
+            android:fontFamily="@font/open_sans_regular"
+            app:layout_constraintEnd_toStartOf="@+id/certificate_date_value_en"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/certificate_date_label_ar"
+            app:layout_constraintBottom_toBottomOf="@+id/certificate_out_of_date"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/certificate_date_value_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size"
+            android:fontFamily="@font/open_sans_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/certificate_date_label_en"
+            app:layout_constraintTop_toTopOf="@+id/certificate_date_label_en"
+            app:layout_constraintBottom_toBottomOf="@+id/certificate_date_label_en"
+            tools:text="06-10-2021" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/certificate_out_of_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/please_reconnect_subtitle"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:fontFamily="@font/open_sans_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/owner_logo"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_owner_logo"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="10dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/scan_button_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/by_label"
+            app:layout_constraintVertical_bias="0.1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/department_logo"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_department_logo"
+            android:scaleType="fitStart"
+            app:layout_constraintStart_toEndOf="@+id/by_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/owner_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/owner_logo"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/by_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_department_logo"
+            android:scaleType="fitEnd"
+            android:paddingStart="18dp"
+            android:paddingEnd="10dp"
+            android:text="@string/by"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:textColor="@color/grey_text"
+            android:fontFamily="@font/open_sans_regular"
+            app:layout_constraintStart_toEndOf="@+id/owner_logo"
+            app:layout_constraintEnd_toStartOf="@+id/department_logo"
+            app:layout_constraintTop_toTopOf="@+id/owner_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/owner_logo"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
